@@ -11,7 +11,7 @@ var client = new twilio(accountSid, authToken);
 app.get('/', function(req, res){
 
     client.messages.create({
-        body: 'Hello from Akshay Mehta CS 643 Fall 2018-19',
+        body: 'Hello from Akshay Mehta CS 643 Fall 2018',
         to: '+12019939065',  // Text this number
         from: '+19738280950' // From a valid Twilio number
     })
