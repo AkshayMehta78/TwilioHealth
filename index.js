@@ -1,7 +1,7 @@
 
 var express = require("express");
 var app = express();
-var port = 3006;
+var port = process.env.PORT || 3006;
 
 var twilio = require('twilio');
 var accountSid = 'AC2548f291356ba5913366f0d444eead03'; // Your Account SID from www.twilio.com/console
@@ -11,7 +11,7 @@ var client = new twilio(accountSid, authToken);
 app.get('/', function(req, res){
 
     client.messages.create({
-        body: 'Hello from Akshay Mehta CS 643 Fall 2018',
+        body: 'Hello from Akshay Mehta CS 643 Fall 2018-19',
         to: '+12019939065',  // Text this number
         from: '+19738280950' // From a valid Twilio number
     })
